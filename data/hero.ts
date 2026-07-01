@@ -2,17 +2,17 @@ export const hero = {
   name: "Gabriel Pacheco",
   headline: "Analytics Engineer & Fundador da TARS Intelligence",
   subheadline:
-    "Transformo dados em decisões. Analytics Engineering, IA aplicada e arquitetura de dados para empresas que levam dados a sério.",
+    "Resolvedor de problemas orientado a dados. Quando assumo algo, eu entrego — alinhado com prazo, expectativa e impacto.",
   cta: {
     primary: { label: "Ver meus serviços", href: "#services" },
     secondary: { label: "Explorar projetos", href: "#projects" },
   },
   stats: [
-    { value: "5+", label: "anos em dados" },
-    { value: "50+", label: "modelos dbt em prod" },
-    { value: "10+", label: "empresas atendidas" },
+    { value: "$300k", label: "impacto identificado" },
+    { value: "77%", label: "melhoria em pipeline" },
+    { value: "$30k+", label: "economia/ano gerada" },
   ],
   avatar: "/images/avatar.jpg",
-  location: "Brasil",
+  location: "São Paulo, Brasil",
   openToWork: false,
 }
