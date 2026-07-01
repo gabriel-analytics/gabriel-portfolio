@@ -9,6 +9,7 @@ import {
   SheetTrigger,
   SheetTitle,
 } from "@/components/ui/sheet"
+import { ThemeToggle } from "@/components/theme-toggle"
 
 const NAV_LINKS = [
   { label: "Sobre", href: "#about" },
@@ -59,12 +60,15 @@ export function Navbar() {
           ))}
         </ul>
 
-        <a
-          href="#contact"
-          className="hidden md:inline-flex items-center justify-center h-8 px-3 rounded-lg bg-primary text-primary-foreground text-sm font-medium hover:bg-primary/80 transition-colors"
-        >
-          Fale comigo
-        </a>
+        <div className="hidden md:flex items-center gap-2">
+          <ThemeToggle />
+          <a
+            href="#contact"
+            className="inline-flex items-center justify-center h-8 px-3 rounded-lg bg-primary text-primary-foreground text-sm font-medium hover:bg-primary/80 transition-colors"
+          >
+            Fale comigo
+          </a>
+        </div>
 
         {/* Mobile menu */}
         <Sheet open={open} onOpenChange={setOpen}>
