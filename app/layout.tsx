@@ -40,13 +40,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR" className={cn(inter.variable)} suppressHydrationWarning>
-      <body className="antialiased bg-background text-foreground">
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+      <body className="antialiased bg-background text-foreground" suppressHydrationWarning>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          disableTransitionOnChange
+        >
           <Navbar />
           <main>{children}</main>
           <Footer />
+          <Analytics />
         </ThemeProvider>
-        <Analytics />
       </body>
     </html>
   )
