@@ -53,11 +53,17 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Erro ao salvar contato" }, { status: 500 })
   }
 
-  // Alerta por email — best-effort, nunca bloqueia nem derruba a resposta.
-  // O Notion (acima) já é a fonte de verdade do lead mesmo que o email falhe.
-  sendLeadNotification({ name, email, message }).catch((err) => {
+  // Alerta por email — best-effort: se falhar, não derruba a resposta, já que
+  // o Notion (acima) é a fonte de verdade do lead. Mas precisa ser AWAITED:
+  // em serverless (Vercel), a função pode ser congelada/encerrada assim que a
+  // resposta é enviada, matando qualquer promise "fire-and-forget" pendente
+  // no meio do caminho — foi exatamente isso que causou emails perdidos
+  // intermitentemente antes dessa correção.
+  try {
+    await sendLeadNotification({ name, email, message })
+  } catch (err) {
     console.error("[contact] Email notification error:", err)
-  })
+  }
 
   return NextResponse.json({ ok: true })
 }
