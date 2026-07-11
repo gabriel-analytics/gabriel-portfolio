@@ -6,12 +6,17 @@ vi.mock("@/lib/notion", () => ({
   saveLeadToNotion: vi.fn(),
 }))
 
+vi.mock("@/lib/email", () => ({
+  sendLeadNotification: vi.fn(),
+}))
+
 vi.mock("@/lib/rate-limit", () => ({
   rateLimit: vi.fn(() => true),
 }))
 
 import { POST } from "../route"
 import { saveLeadToNotion } from "@/lib/notion"
+import { sendLeadNotification } from "@/lib/email"
 import { rateLimit } from "@/lib/rate-limit"
 
 // ---
@@ -32,6 +37,7 @@ describe("POST /api/contact", () => {
     vi.clearAllMocks()
     vi.mocked(rateLimit).mockReturnValue(true)
     vi.mocked(saveLeadToNotion).mockResolvedValue(undefined)
+    vi.mocked(sendLeadNotification).mockResolvedValue(undefined)
   })
 
   it("returns 200 with valid payload", async () => {
@@ -98,6 +104,22 @@ describe("POST /api/contact", () => {
     vi.mocked(saveLeadToNotion).mockRejectedValue(new Error("Notion down"))
     const res = await POST(makeRequest({ name: "Ana", email: "ana@exemplo.com", message: "Olá" }))
     expect(res.status).toBe(500)
+    expect(sendLeadNotification).not.toHaveBeenCalled()
+  })
+
+  it("sends an email notification after saving to Notion", async () => {
+    await POST(makeRequest({ name: "Ana", email: "ana@exemplo.com", message: "Olá" }))
+    expect(sendLeadNotification).toHaveBeenCalledWith({
+      name: "Ana",
+      email: "ana@exemplo.com",
+      message: "Olá",
+    })
+  })
+
+  it("still returns 200 even if the email notification fails", async () => {
+    vi.mocked(sendLeadNotification).mockRejectedValue(new Error("Resend down"))
+    const res = await POST(makeRequest({ name: "Ana", email: "ana@exemplo.com", message: "Olá" }))
+    expect(res.status).toBe(200)
   })
 
   it("returns 400 for invalid JSON body", async () => {

@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server"
 import { saveLeadToNotion } from "@/lib/notion"
+import { sendLeadNotification } from "@/lib/email"
 import { rateLimit } from "@/lib/rate-limit"
 
 // 3 requests per IP per 10 minutes
@@ -47,9 +48,16 @@ export async function POST(req: NextRequest) {
 
   try {
     await saveLeadToNotion({ name, email, message })
-    return NextResponse.json({ ok: true })
   } catch (err) {
     console.error("[contact] Notion error:", err)
     return NextResponse.json({ error: "Erro ao salvar contato" }, { status: 500 })
   }
+
+  // Alerta por email — best-effort, nunca bloqueia nem derruba a resposta.
+  // O Notion (acima) já é a fonte de verdade do lead mesmo que o email falhe.
+  sendLeadNotification({ name, email, message }).catch((err) => {
+    console.error("[contact] Email notification error:", err)
+  })
+
+  return NextResponse.json({ ok: true })
 }
