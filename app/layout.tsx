@@ -12,7 +12,7 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-sans" })
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://gabrielpacheco.dev"
 const TITLE = "Gabriel Pacheco — Analytics Engineer & TARS Intelligence"
 const DESCRIPTION =
-  "Analytics Engineer especializado em SQL, dbt, Python e IA aplicada. Fundador da TARS Intelligence. Projetos com impacto mensurável: $300k identificados, 77% de melhoria em pipeline, $30k+/ano de economia."
+  "Analytics Engineer especializado em SQL, dbt, Python e IA aplicada. Fundador da TARS Intelligence. Projetos com impacto mensurável: $300k identificados, 43% de redução em pipeline crítico, $30k+/ano de economia."
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

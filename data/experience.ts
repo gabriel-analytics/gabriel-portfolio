@@ -8,20 +8,23 @@ export interface ExperienceItem {
   tags: string[]
 }
 
+// Fonte única de verdade: job-search-automation/cv.md (seções Experiência e
+// Projetos). Qualquer alteração aqui deve ser reconciliada lá primeiro.
 export const experience: ExperienceItem[] = [
   {
-    company: "Plataforma de Saúde B2B",
-    role: "Analytics Engineer / Data Analyst",
-    period: "2023 — presente",
+    company: "Bionexo S.A. — Marketplace de Saúde B2B (Healthtech)",
+    role: "Analista de Dados Sênior — Analytics Engineer",
+    period: "ago/2021 — presente",
     current: true,
     bullets: [
-      "Otimizei datamart crítico que processava 2h15min com problemas de qualidade: redesenhei o modelo para tabela pré-agregada, reduzindo para 30min (77% de melhoria) e gerando $30k+/ano de economia em infra",
-      "Repliquei a otimização para 3 tabelas adicionais — reconhecimento interno e convite para integrar o time de Engenharia de Dados",
-      "Construção e melhoria de dashboards e relatórios com impacto direto no NPS dos times que consomem os dados",
-      "Garantia de qualidade dos dados: identificação de nulls, duplicatas e inconsistências, com validação colaborativa junto a devs e arquitetos",
-      "Tradução de problemas de negócio em queries SQL complexas (CTEs, window functions) — datasets analíticos que suportam decisões de produto e operações",
+      "Otimizei e mantive pipelines analíticos em AWS (Athena, EMR, Redshift), com foco em performance e redução de custos, estruturando dados da ingestão ao consumo para múltiplas áreas de negócio",
+      "Otimizei pipeline crítico de datamart: redução de 7h → 4h no tempo de execução (~43%) via otimização de queries SQL, gerando economia de $30k+/ano em infraestrutura (FinOps)",
+      "Modelei datamarts e camadas semânticas (star schema), habilitando produtos de dados escaláveis e suporte à decisão executiva",
+      "Construí e evoluí o módulo de Inteligência de Mercado (Bioanalytics) embarcado na plataforma Bionexo 360, substituindo o uso do MicroStrategy nesse módulo — reduzindo custos de licenciamento e entregando experiência mais integrada aos clientes",
+      "Desenvolvi dashboards em Metabase e MicroStrategy, com prototipação em Figma; melhorias e correções em dashboards/gráficos aumentaram a confiabilidade percebida dos dados, contribuindo para evolução do NPS do produto",
+      "Atuei na resolução de incidentes e backlog técnico e em qualidade/governança de dados, elevando a estabilidade da plataforma e a confiabilidade das análises em alinhamento com squads de produto e engenharia",
     ],
-    tags: ["SQL", "ETL", "Python", "Modelagem Dimensional", "BI", "Qualidade de Dados"],
+    tags: ["SQL", "AWS", "Modelagem Dimensional", "Metabase", "MicroStrategy", "Qualidade de Dados"],
   },
   {
     company: "TARS Intelligence",
@@ -29,24 +32,44 @@ export const experience: ExperienceItem[] = [
     period: "2024 — presente",
     current: true,
     bullets: [
-      "Consultoria de dados e IA: diagnóstico de maturidade, estruturação de roadmap, desenvolvimento e deploy de soluções analíticas",
-      "Desenvolvimento do TARS Hub — knowledge pipeline com RAG, Qdrant e Langfuse para gestão do conhecimento técnico",
-      "Construção do produto assessoria-jurídica SaaS: plataforma multi-tenant com FastAPI, PostgreSQL RLS e MinIO",
-      "Criação de conteúdo técnico sobre Analytics Engineering e IA aplicada no LinkedIn e YouTube",
+      "Arquitetei e implementei um 'Segundo Cérebro' pessoal: pipeline de captura de conteúdo alimentando uma base de conhecimento indexada em banco vetorial (Qdrant) para busca semântica — hoje com 2.084 documentos indexados (73 mil vetores)",
+      "Construí servidores MCP (Model Context Protocol) customizados em Python, expondo busca híbrida (semântica + BM25 + reranking) como ferramentas para agentes de IA (Claude Code)",
+      "Implementei observabilidade de LLM em produção com Langfuse self-hosted (tracing, custo, latência)",
+      "Impacto real: esse conhecimento acelerou o desenvolvimento de outro projeto meu (SaaS de gestão jurídica) — em 2 sessões, gerei 64 cards de conhecimento e mapeei 46 componentes do sistema, 74% reaproveitados direto do vault",
     ],
-    tags: ["Consultoria", "RAG", "FastAPI", "Next.js", "IA Aplicada", "SaaS"],
+    tags: ["Python", "Qdrant", "Langfuse", "MCP", "Claude Code", "RAG"],
   },
   {
-    company: "Consultoria de CRM & Analytics",
-    role: "Analista de Dados / BI",
-    period: "2020 — 2023",
+    company: "Ebix Latin America · alocado em Bradesco Seguros",
+    role: "Analista de Dados — Planejamento e Gestão Comercial",
+    period: "out/2019 — ago/2021",
     current: false,
     bullets: [
-      "Vivência completa no ciclo de consultoria: prospecção, diagnóstico de maturidade de dados, onboarding, roadmap, desenvolvimento e deploy",
-      "Análise de impacto financeiro para empresa de seguros: regressão identificou perda recorrente de $300k/ano, apresentada para diretoria e que resultou em mudança de estratégia de incentivos",
-      "Desenvolvimento de relatórios e dashboards em Power BI para áreas de operações e financeiro",
-      "Modelagem dimensional (star schema) para data marts de vendas e análise 360° de negócio",
+      "Identifiquei perda anual estimada em +$300K USD em produto financeiro via análise de regressão e clusterização, influenciando diretamente revisão da estratégia comercial na diretoria",
+      "Estruturei pipelines ETL com SAS, SQL Server e SSIS, garantindo qualidade e disponibilidade de dados para análises estratégicas e fechamento de indicadores",
+      "Desenvolvi e monitorei KPIs, dashboards e indicadores de performance, apoiando decisões executivas e fortalecendo cultura data-driven",
     ],
-    tags: ["Power BI", "SQL", "Python", "Modelagem Dimensional", "Consultoria", "CRM"],
+    tags: ["SAS", "SQL Server", "SSIS", "Regressão", "Clusterização"],
+  },
+  {
+    company: "Ibope DTM — Consultoria de Marketing & CRM",
+    role: "Analista de Dados — Inteligência de Marketing & CRM",
+    period: "mar/2018 — mar/2019",
+    current: false,
+    bullets: [
+      "Atuei nas 8 fases da esteira de consultoria (prospecção → deploy), participando de projetos end-to-end de CRM e Analytics para clientes de diferentes segmentos",
+      "Desenvolvi dashboards em Tableau, Power BI e QlikSense (piloto de implantação) e realizei análises exploratórias e modelos estatísticos para otimização de campanhas",
+    ],
+    tags: ["Tableau", "Power BI", "QlikSense", "CRM", "Consultoria"],
+  },
+  {
+    company: "Dabasons Imp Exp Com Ltda",
+    role: "Analista de Informações Gerenciais",
+    period: "mai/2014 — abr/2018",
+    current: false,
+    bullets: [
+      "Desenvolvi relatórios gerenciais e análises de comissionamento, apoiando o fechamento contábil e a gestão comercial com Excel, Microsiga e MS Dynamics",
+    ],
+    tags: ["Excel", "Microsiga", "MS Dynamics"],
   },
 ]

@@ -14,7 +14,7 @@ import { ThemeToggle } from "@/components/theme-toggle"
 const NAV_LINKS = [
   { label: "Sobre", href: "#about" },
   { label: "Experiência", href: "#experience" },
-  { label: "Serviços", href: "#services" },
+  { label: "Soluções", href: "#solucoes" },
   { label: "Projetos", href: "#projects" },
   { label: "Stack", href: "#stack" },
   { label: "Contato", href: "#contact" },

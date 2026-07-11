@@ -59,9 +59,9 @@ test.describe("Smoke — página principal", () => {
     await expect(page.locator("#experience").getByText(/Saúde/)).toBeVisible()
   })
 
-  test("seção services renderiza", async ({ page }) => {
-    await page.locator("#services").scrollIntoViewIfNeeded()
-    await expect(page.locator("#services")).toBeVisible()
+  test("seção soluções renderiza", async ({ page }) => {
+    await page.locator("#solucoes").scrollIntoViewIfNeeded()
+    await expect(page.locator("#solucoes")).toBeVisible()
   })
 
   test("seção projects renderiza com filtros", async ({ page }) => {

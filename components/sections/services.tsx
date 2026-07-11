@@ -17,7 +17,7 @@ export function ServicesSection() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 })
 
   return (
-    <section id="services" className="py-24 px-4 sm:px-6">
+    <section id="solucoes" className="py-24 px-4 sm:px-6">
       <div className="max-w-6xl mx-auto">
         <motion.div
           ref={ref}
@@ -29,14 +29,15 @@ export function ServicesSection() {
           {/* Header */}
           <motion.div variants={fadeUp} className="space-y-2 max-w-xl">
             <p className="text-xs font-mono text-primary uppercase tracking-widest">
-              O que faço
+              Soluções
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
-              Serviços e <span className="text-primary">entregas</span>
+              O que gera <span className="text-primary">resultado</span> primeiro
             </h2>
             <p className="text-muted-foreground">
-              Do pipeline de dados à IA aplicada — entrego soluções que o
-              negócio usa de verdade.
+              Do diagnóstico à execução — soluções ordenadas pelo que gera
+              receita e crescimento para quem contrata, não só eficiência
+              interna.
             </p>
           </motion.div>
 
@@ -70,7 +71,10 @@ export function ServicesSection() {
                     <Icon className="h-5 w-5" />
                   </div>
 
-                  <h3 className="font-semibold mb-2">{service.title}</h3>
+                  <h3 className="font-semibold mb-1">{service.title}</h3>
+                  <p className="text-xs font-medium text-foreground/80 mb-3 leading-snug">
+                    {service.tagline}
+                  </p>
                   <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
                     {service.description}
                   </p>
@@ -83,6 +87,13 @@ export function ServicesSection() {
                       </li>
                     ))}
                   </ul>
+
+                  {service.proof && (
+                    <div className="mt-4 inline-flex items-center gap-1.5 text-[11px] font-semibold text-primary bg-primary/10 px-2.5 py-1 rounded-full">
+                      <span>✓</span>
+                      {service.proof.label}
+                    </div>
+                  )}
                 </motion.div>
               )
             })}

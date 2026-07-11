@@ -89,7 +89,7 @@ export function ContactSection() {
                 </a>
 
                 <a
-                  href="https://linkedin.com/in/gabrielpacheco"
+                  href="https://www.linkedin.com/in/gabriel-pacheco-5541024a"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 group text-sm"
@@ -98,7 +98,7 @@ export function ContactSection() {
                     <LinkedinIcon className="h-4 w-4 text-primary" />
                   </div>
                   <span className="text-muted-foreground group-hover:text-foreground transition-colors">
-                    linkedin.com/in/gabrielpacheco
+                    linkedin.com/in/gabriel-pacheco-5541024a
                   </span>
                 </a>
 

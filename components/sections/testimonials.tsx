@@ -73,7 +73,7 @@ export function TestimonialsSection() {
           <motion.p variants={fadeUp} className="text-center text-xs text-muted-foreground">
             Trabalhamos juntos?{" "}
             <a
-              href="https://linkedin.com/in/gabrielpacheco"
+              href="https://www.linkedin.com/in/gabriel-pacheco-5541024a"
               target="_blank"
               rel="noopener noreferrer"
               className="text-primary hover:underline"

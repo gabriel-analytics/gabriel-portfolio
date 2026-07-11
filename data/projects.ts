@@ -13,29 +13,27 @@ export interface ProjectItem {
 
 export const projects: ProjectItem[] = [
   {
-    title: "Otimização de Datamart — 77% mais rápido",
+    title: "Otimização de Pipeline — 43% mais rápido",
     description:
-      "Pipeline crítico que processava 2h15min com problemas de qualidade e performance. Redesenho completo do modelo gerou 77% de melhoria e $30k+/ano de economia em infraestrutura.",
+      "Pipeline crítico de datamart levando 7h para processar, gerando custo de infraestrutura e atraso na disponibilidade dos dados. Otimização de queries SQL reduziu o tempo de execução e gerou economia real.",
     category: "analytics",
     tags: ["SQL", "ETL", "Modelagem Dimensional", "Otimização", "Python"],
     highlights: [
-      "Redução de 2h15min → 30min de processamento (77% de melhoria)",
-      "Redesenho do modelo: tabela pré-agregada alinhada com necessidades reais do negócio",
-      "Replicado para 3 tabelas adicionais — $30k+/ano de economia total em infra",
-      "Reconhecimento interno + convite para o time de Engenharia de Dados",
+      "Redução de 7h → 4h no tempo de execução (~43% de melhoria)",
+      "Otimização de queries SQL do pipeline, sem comprometer qualidade/disponibilidade dos dados",
+      "Economia de $30k+/ano em infraestrutura (FinOps)",
     ],
   },
   {
     title: "Análise de Impacto Financeiro — $300k identificados",
     description:
-      "Empresa de seguros com queda recorrente de 0.5% em produto financeiro. Análise de regressão estimou o impacto real, resultando em mudança de estratégia executiva.",
+      "Produto financeiro de uma seguradora com performance sob suspeita, sem causa raiz identificada. Análise exploratória com regressão e clusterização estimou o impacto real, resultando em mudança de estratégia comercial.",
     category: "analytics",
-    tags: ["Python", "SQL", "Regressão", "Análise de Impacto", "Storytelling com Dados"],
+    tags: ["SAS", "SQL Server", "Regressão", "Clusterização"],
     highlights: [
-      "Identificação de queda recorrente de 0.5% em produto financeiro",
-      "Análise de regressão estimou perda anual de $300k USD",
-      "Apresentação para a diretoria com dados e recomendação",
-      "Mudança na estratégia de incentivos e melhora no desempenho do produto",
+      "Identifiquei perda anual estimada em +$300K USD via análise de regressão e clusterização",
+      "Influenciou diretamente a revisão da estratégia comercial na diretoria",
+      "Parte de um trabalho mais amplo de pipelines ETL (SAS, SQL Server, SSIS) para análises estratégicas",
     ],
   },
   {

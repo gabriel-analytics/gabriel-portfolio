@@ -15,8 +15,8 @@ export const stack: StackCategory[] = [
     items: [
       { name: "SQL", category: "SQL & Dados", level: "expert" },
       { name: "Python", category: "SQL & Dados", level: "proficient" },
-      { name: "dbt Core", category: "SQL & Dados", level: "proficient" },
-      { name: "DuckDB", category: "SQL & Dados", level: "proficient" },
+      { name: "dbt Core", category: "SQL & Dados", level: "familiar" },
+      { name: "DuckDB", category: "SQL & Dados", level: "familiar" },
       { name: "Pandas / NumPy", category: "SQL & Dados", level: "proficient" },
       { name: "Modelagem Dimensional", category: "SQL & Dados", level: "proficient" },
     ],
@@ -24,9 +24,8 @@ export const stack: StackCategory[] = [
   {
     name: "Cloud & Warehouses",
     items: [
-      { name: "BigQuery (GCP)", category: "Cloud & Warehouses", level: "proficient" },
-      { name: "Snowflake", category: "Cloud & Warehouses", level: "proficient" },
-      { name: "AWS + Spark", category: "Cloud & Warehouses", level: "familiar" },
+      { name: "AWS (Athena, EMR, Redshift)", category: "Cloud & Warehouses", level: "expert" },
+      { name: "BigQuery (GCP)", category: "Cloud & Warehouses", level: "familiar" },
       { name: "Terraform", category: "Cloud & Warehouses", level: "familiar" },
       { name: "Docker", category: "Cloud & Warehouses", level: "proficient" },
     ],
@@ -50,11 +49,12 @@ export const stack: StackCategory[] = [
   {
     name: "IA Aplicada",
     items: [
-      { name: "LangGraph", category: "IA Aplicada", level: "proficient" },
+      { name: "Claude Code / MCP", category: "IA Aplicada", level: "proficient" },
       { name: "RAG / Embeddings", category: "IA Aplicada", level: "proficient" },
       { name: "Qdrant", category: "IA Aplicada", level: "proficient" },
       { name: "Langfuse", category: "IA Aplicada", level: "proficient" },
-      { name: "Claude API", category: "IA Aplicada", level: "proficient" },
+      { name: "CrewAI", category: "IA Aplicada", level: "familiar" },
+      { name: "DeepEval", category: "IA Aplicada", level: "familiar" },
     ],
   },
   {

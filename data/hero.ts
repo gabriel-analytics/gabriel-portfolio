@@ -4,12 +4,12 @@ export const hero = {
   subheadline:
     "Resolvedor de problemas orientado a dados. Quando assumo algo, eu entrego — alinhado com prazo, expectativa e impacto.",
   cta: {
-    primary: { label: "Ver meus serviços", href: "#services" },
+    primary: { label: "Ver minhas soluções", href: "#solucoes" },
     secondary: { label: "Explorar projetos", href: "#projects" },
   },
   stats: [
     { value: "$300k", label: "impacto identificado" },
-    { value: "77%", label: "melhoria em pipeline" },
+    { value: "43%", label: "redução em pipeline crítico" },
     { value: "$30k+", label: "economia/ano gerada" },
   ],
   avatar: "/images/avatar.jpg",

@@ -73,7 +73,7 @@ export default function OGImage() {
         <div style={{ display: "flex", gap: 48 }}>
           {[
             { value: "$300k", label: "impacto identificado" },
-            { value: "77%", label: "melhoria em pipeline" },
+            { value: "43%", label: "redução em pipeline crítico" },
             { value: "$30k+/ano", label: "economia gerada" },
           ].map((stat) => (
             <div key={stat.label} style={{ display: "flex", flexDirection: "column", gap: 4 }}>
