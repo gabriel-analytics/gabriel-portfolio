@@ -10,9 +10,9 @@ import "./globals.css"
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" })
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://gabrielpacheco.dev"
-const TITLE = "Gabriel Pacheco — Analytics Engineer & TARS Intelligence"
+const TITLE = "Gabriel Pacheco — Analytics Engineer"
 const DESCRIPTION =
-  "Analytics Engineer especializado em SQL, dbt, Python e IA aplicada. Fundador da TARS Intelligence. Projetos com impacto mensurável: $300k identificados, 43% de redução em pipeline crítico, $30k+/ano de economia."
+  "Analytics Engineer especializado em SQL, dbt, Python e IA aplicada. Projetos com impacto mensurável: $300k identificados, 43% de redução em pipeline crítico, $30k+/ano de economia."
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -29,7 +29,6 @@ export const metadata: Metadata = {
     "SQL",
     "Python",
     "IA aplicada",
-    "TARS Intelligence",
     "consultoria de dados",
     "Power BI",
     "Airflow",
@@ -50,7 +49,7 @@ export const metadata: Metadata = {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "Gabriel Pacheco — Analytics Engineer & TARS Intelligence",
+        alt: "Gabriel Pacheco — Analytics Engineer",
       },
     ],
   },

@@ -1,24 +1,24 @@
 export const about = {
   bio: [
-    "Sou Analytics Engineer sênior com mais de 10 anos em dados, atuando end-to-end — da ingestão à visualização executiva — em marketplaces de saúde, seguradoras e consultoria de CRM/Analytics. Minha base é modelagem dimensional, pipelines ETL/ELT em nuvem e qualidade de dados.",
-    "Hoje atuo como Analista de Dados Sênior / Analytics Engineer na Bionexo, uma das maiores plataformas de saúde B2B da América Latina — otimizando pipelines críticos (redução de 43% no tempo de execução de um pipeline crítico, gerando $30k+/ano de economia) e construindo produtos de dados que sustentam decisões do negócio.",
-    "Paralelamente, fundei a TARS Intelligence — consultoria e laboratório de IA onde desenvolvo soluções para clientes e experimento com o que há de mais moderno em dados e LLMs.",
+    "Ajudo empresas a transformar dados dispersos em decisões estratégicas, eficiência operacional e crescimento sustentável — com mais de 10 anos de experiência end-to-end em marketplaces de saúde, seguradoras e consultoria de CRM/Analytics.",
+    "Hoje conduzo essa transformação na Bionexo, uma das maiores plataformas de saúde B2B da América Latina — onde a otimização de um pipeline crítico gerou 43% de redução no tempo de execução e $30k+/ano em economia real.",
+    "Paralelamente, fundei a TARS Intelligence — consultoria e laboratório de IA onde aplico esse mesmo rigor para gerar resultado em outros negócios, não só o meu.",
   ],
   values: [
     {
       title: "Dado confiável primeiro",
       description:
-        "Sem qualidade de dado, não existe análise. Valido, documento e monitoro cada pipeline antes de qualquer entrega.",
+        "Decisão baseada em dado ruim custa caro. Valido, documento e monitoro cada pipeline antes de qualquer entrega chegar à sua mesa.",
     },
     {
       title: "Negócio no centro",
       description:
-        "Dado sem impacto em decisão é custo operacional. Cada entrega precisa ter um 'por que importa' — conectado com ROI real.",
+        "Dado sem impacto em decisão é custo, não ativo. Toda entrega parte de um 'por que isso importa para o seu resultado' — não de tecnologia pela tecnologia.",
     },
     {
       title: "Ownership total",
       description:
-        "Quando assumo algo, entrego — alinhado com prazo, expectativa e impacto. Complexidade técnica nunca é desculpa.",
+        "Quando assumo um projeto, entrego — no prazo, dentro da expectativa, com o impacto combinado. Complexidade técnica nunca é desculpa para atraso.",
     },
   ],
   education: [

@@ -1,8 +1,8 @@
 export const hero = {
   name: "Gabriel Pacheco",
-  headline: "Analytics Engineer & Fundador da TARS Intelligence",
+  headline: "Analytics Engineer",
   subheadline:
-    "Resolvedor de problemas orientado a dados. Quando assumo algo, eu entrego — alinhado com prazo, expectativa e impacto.",
+    "Soluções estratégicas de Analytics que transformam dados em decisões, eficiência operacional e crescimento sustentável.",
   cta: {
     primary: { label: "Ver minhas soluções", href: "#solucoes" },
     secondary: { label: "Explorar projetos", href: "#projects" },

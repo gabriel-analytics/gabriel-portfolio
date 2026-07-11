@@ -70,9 +70,9 @@ export function ContactSection() {
             {/* Info lateral */}
             <motion.div variants={fadeUp} className="space-y-8">
               <p className="text-muted-foreground leading-relaxed">
-                Se você quer transformar dados em decisão — seja implantando pipelines,
-                construindo modelos ou estruturando a inteligência analítica da sua empresa
-                — me conta o projeto e a gente descobre o próximo passo juntos.
+                Se sua empresa precisa de decisões mais rápidas, operação mais eficiente
+                ou crescimento sustentado por dados de verdade — me conta o desafio e a
+                gente desenha o próximo passo juntos.
               </p>
 
               <div className="space-y-4">

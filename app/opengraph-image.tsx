@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og"
 
 export const runtime = "edge"
-export const alt = "Gabriel Pacheco — Analytics Engineer & TARS Intelligence"
+export const alt = "Gabriel Pacheco — Analytics Engineer"
 export const size = { width: 1200, height: 630 }
 export const contentType = "image/png"
 
@@ -45,7 +45,7 @@ export default function OGImage() {
               textTransform: "uppercase",
             }}
           >
-            Analytics Engineer · TARS Intelligence
+            Analytics Engineer
           </div>
           <div
             style={{
