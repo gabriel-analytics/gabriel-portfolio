@@ -27,19 +27,6 @@ export const experience: ExperienceItem[] = [
     tags: ["SQL", "AWS", "Modelagem Dimensional", "Metabase", "MicroStrategy", "Qualidade de Dados"],
   },
   {
-    company: "TARS Intelligence",
-    role: "Fundador & Analytics Engineer",
-    period: "2024 — presente",
-    current: true,
-    bullets: [
-      "Arquitetei e implementei um 'Segundo Cérebro' pessoal: pipeline de captura de conteúdo alimentando uma base de conhecimento indexada em banco vetorial (Qdrant) para busca semântica — hoje com 2.084 documentos indexados (73 mil vetores)",
-      "Construí servidores MCP (Model Context Protocol) customizados em Python, expondo busca híbrida (semântica + BM25 + reranking) como ferramentas para agentes de IA (Claude Code)",
-      "Implementei observabilidade de LLM em produção com Langfuse self-hosted (tracing, custo, latência)",
-      "Impacto real: esse conhecimento acelerou o desenvolvimento de outro projeto meu (SaaS de gestão jurídica) — em 2 sessões, gerei 64 cards de conhecimento e mapeei 46 componentes do sistema, 74% reaproveitados direto do vault",
-    ],
-    tags: ["Python", "Qdrant", "Langfuse", "MCP", "Claude Code", "RAG"],
-  },
-  {
     company: "Ebix Latin America · alocado em Bradesco Seguros",
     role: "Analista de Dados — Planejamento e Gestão Comercial",
     period: "out/2019 — ago/2021",
