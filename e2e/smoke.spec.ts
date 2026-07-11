@@ -84,10 +84,8 @@ test.describe("Smoke — página principal", () => {
     await expect(page.locator("#stack").getByText(/SQL/).first()).toBeVisible()
   })
 
-  test("seção testimonials renderiza", async ({ page }) => {
-    await page.locator("#testimonials").scrollIntoViewIfNeeded()
-    await expect(page.locator("#testimonials")).toBeVisible()
-  })
+  // Seção testimonials removida do render (só tinha cards placeholder) —
+  // volta a ter teste quando a seção voltar a ser exibida em app/page.tsx.
 
   test("seção contact renderiza com formulário", async ({ page }) => {
     await page.locator("#contact").scrollIntoViewIfNeeded()

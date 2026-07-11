@@ -9,7 +9,7 @@ import "./globals.css"
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" })
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://gabrielpacheco.dev"
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://gabriel-portfolio-neon.vercel.app"
 const TITLE = "Gabriel Pacheco — Analytics Engineer"
 const DESCRIPTION =
   "Analytics Engineer especializado em SQL, dbt, Python e IA aplicada. Projetos com impacto mensurável: $300k identificados, 43% de redução em pipeline crítico, $30k+/ano de economia."

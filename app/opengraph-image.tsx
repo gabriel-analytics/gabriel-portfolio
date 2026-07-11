@@ -31,7 +31,7 @@ export default function OGImage() {
             }}
           />
           <span style={{ color: "#8b5cf6", fontSize: 18, letterSpacing: 4, textTransform: "uppercase" }}>
-            gabrielpacheco.dev
+            gabriel-portfolio-neon.vercel.app
           </span>
         </div>
 
